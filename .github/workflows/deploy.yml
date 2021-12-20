@@ -1,13 +1,13 @@
 name: Deploy
 
-# Run on pushes to main or PRs
+# Run on pushes to release/3.15.4 or PRs
 on:
   # Pull request hook without any config. Launches for every pull request
   pull_request:
-  # Launches for pushes to main or dev
+  # Launches for pushes to release/3.15.4 or dev
   push:
     branches:
-      - main
+      - release/3.15.4
       - dev
   # Launches build when release is published
   release:
@@ -71,17 +71,17 @@ jobs:
       # Set dev flag (for PR deployments)
       - name: Set PR flag
         run: echo "REACT_APP_ENV=dev" >> $GITHUB_ENV
-        if: github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/release/3.15.4'
 
       # Set production flag on staging
       - name: Set production flag for staging
         run: echo "REACT_APP_ENV=production" >> $GITHUB_ENV
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/release/3.15.4'
 
       # Set production flag on prod
       - name: Set production flag for release PR or tagged build
         run: echo "REACT_APP_ENV=production" >> $GITHUB_ENV
-        if: startsWith(github.ref, 'refs/tags/v') || github.base_ref == 'main'
+        if: startsWith(github.ref, 'refs/tags/v') || github.base_ref == 'release/3.15.4'
 
       - name: Build app
         run: yarn build
@@ -114,7 +114,7 @@ jobs:
         with:
           message: |
             ## Deployment links
-            :orange_circle: [Safe Rinkeby](${{ env.REVIEW_FEATURE_URL }}/rinkeby) | :white_circle: [Safe Mainnet](${{ env.REVIEW_FEATURE_URL }}/mainnet) | :purple_circle: [Safe Polygon](${{ env.REVIEW_FEATURE_URL }}/polygon) | :yellow_circle: [Safe BSC](${{ env.REVIEW_FEATURE_URL }}/bsc) | :black_circle: [Safe Arbitrum](${{ env.REVIEW_FEATURE_URL }}/arbitrum) | :green_circle: [Safe xDai](${{ env.REVIEW_FEATURE_URL }}/xdai)
+            :orange_circle: [Safe Rinkeby](${{ env.REVIEW_FEATURE_URL }}/rinkeby) | :white_circle: [Safe Mainnet](${{ env.REVIEW_FEATURE_URL }}/release/mainnet) | :purple_circle: [Safe Polygon](${{ env.REVIEW_FEATURE_URL }}/polygon) | :yellow_circle: [Safe BSC](${{ env.REVIEW_FEATURE_URL }}/bsc) | :black_circle: [Safe Arbitrum](${{ env.REVIEW_FEATURE_URL }}/arbitrum) | :green_circle: [Safe xDai](${{ env.REVIEW_FEATURE_URL }}/xdai)
             -|-|-|-|-|-
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: 'github-actions[bot]'
@@ -129,7 +129,7 @@ jobs:
 
       # Script to deploy to staging environment
       - name: 'Deploy to S3: Staging'
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/release/3.15.4'
         run: aws s3 sync build s3://${{ env.STAGING_BUCKET_NAME }}/current/app --delete
 
       # Script to upload release files
@@ -155,7 +155,7 @@ jobs:
 
       # Upload Sentry source maps when sending to staging or production
       - run: yarn sentry-upload-sourcemaps
-        if: success() && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+        if: success() && (github.ref == 'refs/heads/release/3.15.4' || startsWith(github.ref, 'refs/tags/v'))
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
