@@ -77,7 +77,7 @@ const Sidebar = ({
 
     <HelpContainer>
       <StyledDivider />
-      <HelpCenterLink href="https://help.gnosis-safe.io/en/" target="_blank" title="Help Center of Gnosis Safe">
+      <HelpCenterLink href="hello@metissafe.tech" target="_blank" title="Help Center of Metis Safe">
         <IconText text="HELP CENTER" iconSize="md" textSize="md" color="placeHolder" iconType="question" />
       </HelpCenterLink>
     </HelpContainer>

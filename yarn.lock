@@ -2148,11 +2148,6 @@
     "@gnosis.pm/safe-core-sdk-types" "^0.1.1"
     ethereumjs-util "^7.0.10"
 
-"@gnosis.pm/safe-deployments@^1.2.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-deployments/-/safe-deployments-1.4.0.tgz#d49d3d36cc014ef62306d09c0f4761895a17d7a6"
-  integrity sha512-q4salJNQ/Gx0DnZJytAFO/U4OwGI6xTGtTJSOZK+C9Fh2NW8sep+YfSunHQvCLcu4b7WgWEBhxnCV6rpyveLHg==
-
 "@gnosis.pm/safe-react-components@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-react-components/-/safe-react-components-0.8.0.tgz#1c957f53c08833f9c8f2f2908c19b6823f573578"
@@ -2776,6 +2771,11 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
+
+"@metissafe/safe-deployments@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@metissafe/safe-deployments/-/safe-deployments-1.5.0.tgz#df5d6a013f31607e4a0e8a9d3500e9c1c1e82b57"
+  integrity sha512-Z3e+KNRZNLJWlSgg+KkgWUKt4FX0q9wqKdgF32HuKWQzj0bsxJMFWAjA6Am5fLzia+jbF3FvxP18/6BOavZJUg==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
