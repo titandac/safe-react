@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import local from './local'
 
-const useCachedState = <T>(key: string): [T | undefined, React.Dispatch<React.SetStateAction<T>>] => {
+const useStoredState = <T>(key: string): [T | undefined, React.Dispatch<React.SetStateAction<T>>] => {
   const [cache, setCache] = useState<T>()
 
   useEffect(() => {
@@ -16,4 +16,4 @@ const useCachedState = <T>(key: string): [T | undefined, React.Dispatch<React.Se
   return [cache, setCache]
 }
 
-export default useCachedState
+export default useStoredState
