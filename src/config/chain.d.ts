@@ -20,6 +20,8 @@ export const CHAIN_ID: Record<ChainName, ChainId> = {
   XDAI: '100',
   POLYGON: '137',
   ENERGY_WEB_CHAIN: '246',
+  STARDUST: '588',
+  ANDROMEDA: '1088',
   LOCAL: '4447',
   ARBITRUM: '42161',
   AVALANCHE: '43114',

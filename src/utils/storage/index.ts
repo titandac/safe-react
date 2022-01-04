@@ -13,6 +13,8 @@ const STORAGE_KEYS: Record<ChainId, string> = {
   [CHAIN_ID.ENERGY_WEB_CHAIN]: 'ENERGY_WEB_CHAIN',
   [CHAIN_ID.ARBITRUM]: 'ARBITRUM',
   [CHAIN_ID.VOLTA]: 'VOLTA',
+  [CHAIN_ID.STARDUST]: 'STARDUST',
+  [CHAIN_ID.ANDROMEDA]: 'ANDROMEDA',
 }
 
 export const storage = new Storage(window.localStorage, '')
