@@ -40,7 +40,7 @@ const andromeda: NetworkConfig = {
     label: 'Andromeda',
     ethereumLayer: ETHEREUM_LAYER.L2,
     nativeCoin: {
-      address: '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
+      address: '0x0000000000000000000000000000000000000000',
       name: 'Metis',
       symbol: 'METIS',
       decimals: 18,
