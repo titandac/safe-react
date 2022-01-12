@@ -2772,10 +2772,10 @@
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
 
-"@metissafe/safe-deployments@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@metissafe/safe-deployments/-/safe-deployments-1.5.0.tgz#df5d6a013f31607e4a0e8a9d3500e9c1c1e82b57"
-  integrity sha512-Z3e+KNRZNLJWlSgg+KkgWUKt4FX0q9wqKdgF32HuKWQzj0bsxJMFWAjA6Am5fLzia+jbF3FvxP18/6BOavZJUg==
+"@metissafe/safe-deployments@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@metissafe/safe-deployments/-/safe-deployments-1.5.1.tgz#e6e4dbc908469324873d2ed147e3b65751e73072"
+  integrity sha512-SKkSabV/wPrgXAYZvPZkgOHkkRKRIEgj/lG/BO/GRSD44vsmqdHL081zS2Vqv7uWFP/hss14hm6McaI2wDwXKw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
