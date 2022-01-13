@@ -10,9 +10,9 @@ import {
 } from 'src/config/networks/network.d'
 
 const baseConfig: EnvironmentSettings = {
-  clientGatewayUrl: 'https://andromeda-infra.metissafe.tech/cgw/v1',
-  txServiceUrl: 'https://andromeda-infra.metissafe.tech/txs/api/v1',
-  gasPrice: 1e9, // 1 Gwei TODO: add gasPriceOracles
+  clientGatewayUrl: 'http://localhost:8000/cgw/v1',
+  txServiceUrl: 'http://localhost:8000/txs/api/v1',
+  gasPrice: 165e8, // 16 Gwei TODO: add gasPriceOracles
   rpcServiceUrl: 'https://andromeda.metis.io/?owner=1088',
   safeAppsRpcServiceUrl: 'https://andromeda.metis.io/?owner=1088',
   networkExplorerName: 'Andromeda Explorer',
